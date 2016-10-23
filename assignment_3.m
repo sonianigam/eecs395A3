@@ -13,7 +13,8 @@
 
 function output = bilateralFilter( data, sigmaSpatial, sigmaRange)
 
-data = rgb2gray(im2double(imread('data.jpg')));
+data = rgb2gray(im2double(imread(data)));
+
 
 if( ndims( data ) > 2 );
     error( 'data must be a greyscale image with size [ height, width ]' );
